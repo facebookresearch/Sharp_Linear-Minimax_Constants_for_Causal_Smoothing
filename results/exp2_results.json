@@ -1,0 +1,43 @@
+{
+  "0": {
+    "p": 0,
+    "K": 1.100642416298,
+    "certified": false,
+    "status": "analytic",
+    "structure": "one piece",
+    "K_bb": 1.191,
+    "bb_gap_pct": 8.209531303174462
+  },
+  "1": {
+    "p": 1,
+    "K": 1.7451509858523377,
+    "certified": true,
+    "status": "certified",
+    "structure": "infinite endpoint cascade",
+    "K_bb": 1.79,
+    "bb_gap_pct": 2.569921715155086
+  },
+  "2": {
+    "p": 2,
+    "K": 2.407831231815167,
+    "certified": true,
+    "status": "certified",
+    "structure": "infinite endpoint cascade",
+    "K_bb": 2.554,
+    "bb_gap_pct": 6.070557032962904
+  },
+  "3": {
+    "p": 3,
+    "K": 3.0725144355627183,
+    "certified": true,
+    "status": "certified",
+    "structure": "infinite endpoint cascade"
+  },
+  "4": {
+    "p": 4,
+    "K": 3.7360360214557904,
+    "certified": true,
+    "status": "certified",
+    "structure": "infinite endpoint cascade"
+  }
+}

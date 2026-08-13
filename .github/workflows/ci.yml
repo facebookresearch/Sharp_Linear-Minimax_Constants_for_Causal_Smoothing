@@ -1,0 +1,29 @@
+name: checks
+
+# Runs only the parts of the reproduction that are exactly reproducible on any
+# platform: the AST solver guard, the harness unit tests, and the exact-rational
+# certificate. All three are pure standard library, so no dependencies are
+# installed. The floating-point experiments (`make verify`) are deliberately not
+# run here -- they are reproducible only to a tolerance across BLAS builds, and
+# are documented in the README as a local check.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: No superseded finite-knot solver is imported
+        run: make check-solver
+      - name: Harness unit tests
+        run: make test
+      - name: Exact-rational certificate reproduces byte-for-byte
+        run: make certificate
